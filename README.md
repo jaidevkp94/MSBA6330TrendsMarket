@@ -30,7 +30,7 @@ spark = SparkSession \
          .getOrCreate()
 
 #### Step2: Read in sparkify dataset
-full_data = "s3n://udacity-dsnd/sparkify/sparkify_event_data.json"<br>
+full_data = "s3n://udacity-dsnd/sparkify/sparkify_event_data.json"
 mini_data = "s3n://udacity-dsnd/sparkify/mini_sparkify_event_data.json"
 
 df = spark.read.json(full_data)
@@ -46,9 +46,13 @@ The target audience of our analysis would be digital music service firms and the
 Ingestion, ETL, exploration, Analysis: AWS S3, Databricks(Spark)<br>
 Visualization: AWS quicksight
 
+# Instructions to run the scripts
+Sparkify_code.ipynb is the first script that needs to be run. This script performs the data pre-processing, feature engineering & model building.
+Stream.ipynb is the second script that has to be run. It assumes that the customer churn model is already built from the previous script & implements streaming analysis using the churn model.
+
 # Reference
 1.https://github.com/CapAllen/Sparkify<br>
-2.https://medium.com/@olivier.klein/sparkify-udacity-data-scientist-nanodegree-capstone-project-65e3181ea2b0<br>
+2.https://medium.com/@olivier.klein/sparkify-udacity-data-scientist-nanodegree-capstone-project-65e3181ea2b0
 3.https://github.com/Tselmeg-C/Churn_prediction_Udacity_Capstone
 
 
